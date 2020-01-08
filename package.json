@@ -1,7 +1,13 @@
 {
-  "name": "components-library",
+  "name": "@clecrois/components-library",
   "version": "0.1.0",
-  "private": true,
+  "files": [
+    "dist"
+  ],
+  "typings": "dist/index.d.ts",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
@@ -19,7 +25,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "build-library": "rm -rf ./dist && rollup -c"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -35,5 +42,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "rollup": "^1.29.0",
+    "rollup-plugin-typescript2": "^0.25.3"
   }
 }
