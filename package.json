@@ -1,6 +1,7 @@
 {
   "name": "@clecrois/components-library",
   "version": "0.1.1",
+  "main": "dist/index.js",
   "files": [
     "dist"
   ],
@@ -26,7 +27,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "build-library": "rm -rf ./dist && rollup -c"
+    "build-library": "rm -rf ./dist && rollup -c",
+    "publish-library": "yarn run build-library && npm publish"
   },
   "eslintConfig": {
     "extends": "react-app"
