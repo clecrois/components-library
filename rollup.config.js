@@ -1,11 +1,10 @@
 import typescript from 'rollup-plugin-typescript2';
 
-import pkg from './package.json';
-
 export default [
   {
     input: "src/components/index.ts",
-    external: Object.keys(pkg.peerDependencies || {}),
+    external: ['styled-components'],
+    globals: { 'styled-components': 'styled' },
     plugins: [
       typescript({
         typescript: require("typescript"),
