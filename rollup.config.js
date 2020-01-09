@@ -23,7 +23,6 @@ export default [
         }
       })
     ],
-    external: ['styled-components'],
-    globals: { 'styled-components': 'styled' },
+    external: ['styled-components', 'react'],
   }
 ];
